@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>retrive image</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+       h2 {
+           color:cornflowerblue;
+           text-align: center;
+           font-style: oblique;
+           font-size: 50px;
+           font-weight:bold;
+           }
+        body
+        {
+            background-image:url("background.jpg");
+        }
+        .image
+        {
+            alignment: center;
+            width:1200px;
+            height:450px;
+            margin-top:-200px;
+
+        }
+        form{
+            text-align: center;
+            margin-top:400px;
+            font-size: 30px;
+            font-weight:bold;
+
+        }
+
+        input{
+            width:20%;
+            height:35px;
+            border: 2px solid blue;
+            border-radius: 4px;
+
+        }
+
+        input[type=text]:focus
+        {
+
+            background-color:lightblue;
+        }
+
+       .button {
+           display: inline-block;
+           padding: 10px 35px;
+           cursor: pointer;
+           font-size:20px;
+           text-align: center;
+           text-decoration: none;
+           outline: none;
+           color: #fff;
+           background-color: #4CAF50;
+           border: none;
+           border-radius: 15px;
+           box-shadow: 0 9px #999;
+       }
+
+       .button:hover {background-color: #3e8e41}
+
+       .button:active {
+           background-color: #3e8e41;
+           box-shadow: 0 5px #666;
+           transform: translateY(4px);
+       }
+
+    </style>
+
+
+</head>
+<body>
+
+<h2>The ultimate photo booth</h2>
+
+<div class="image">
+<img src="logo.png" >
+</div>
+
+<form action="/getdata" enctype="multipart/form-data" method="get">
+    PhotoId: <input type="text" name ="photoid">
+    <input class="button" type="submit" value="GetPhoto">
+</form>
+</body>
+</html>
